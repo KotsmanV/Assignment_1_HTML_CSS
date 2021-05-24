@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.0.0.js"></script>
+    <script src="../../Scripts/umd/popper.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+
+    <link href="../../Content/dropdown-menu.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--header
+        1st row-->
+        <header class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a class="navbar-brand" href="../../index.html">Home</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+
+                            <!--Courses-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../HTML/Courses/Courses.html">Courses</a>
+                            </li>
+
+                            <!--Trainers-->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../../HTML/Trainers/Trainers.html">Trainers</a>
+                            </li>
+
+                            <!--Students-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../HTML/Students/Students.html">Students</a>
+                            </li>
+
+                            <!--Assignments-->
+                            <li class="nav-item active">
+                                <a class="nav-link text-warning" href="Assignments.html">Assignments</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="row">
+            <div class="col">
+                <div class="container-fluid">
+
+
+                    <h3 class="mt-4">Assignments</h3>
+
+
+                    <div class="mt-4 mb-0">
+                        <a class="btn btn-success" href="Assignments_add.html">Add Assignment</a>
+                    </div>
+
+                    <div class="mt-4 mb-0">
+                        <table class="table table-bordered table-striped table-light text-center">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>Submission Date</th>
+                                    <th>Course</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td>Final</td>
+                                    <td><p>This is presented at the end of the course's duration.</p></td>
+                                    <td>5 to 10 days before the course ends.</td>
+                                    <td>
+
+                                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#courses-final">
+                                            View
+                                        </button>
+
+                                        <div class="modal" id="courses-final">
+                                            <div class="modal-dialog modal-dialog-scrollable">
+                                                <div class="modal-content">
+
+
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Courses with selected assignment</h4>
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <table class="table table-light text-center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Drums</td>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Theory</td>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Guitar</td>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+
+                                                        </table>
+                                                    </div>
+
+
+                                                    <div class="modal-footer">
+                                                        <div class="btn-group"></div>
+                                                        <a href="Assignments_Edit.html" class="btn btn-warning">Edit</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-warning" href="Assignments_Edit.html">Edit</a>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mid Term</td>
+                                    <td><p>This is presented at the middle of the course's duration.</p></td>
+                                    <td>Somewhere in the half of the semester.</td>
+                                    <td>
+
+                                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#courses-midterm">
+                                            View
+                                        </button>
+
+                                        <div class="modal" id="courses-midterm">
+                                            <div class="modal-dialog modal-dialog-scrollable">
+                                                <div class="modal-content">
+
+
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Courses with selected assignment</h4>
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <table class="table table-light text-center">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Drums</td>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Theory</td>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Guitar</td>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+
+                                                        </table>
+                                                    </div>
+
+
+                                                    <div class="modal-footer">
+                                                        <div class="btn-group"></div>
+                                                        <a href="Assignments_Edit.html" class="btn btn-warning">Edit</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-warning" href="Assignments_Edit.html">Edit</a>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div>
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal" id="delete">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Are you sure you want to delete?</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>

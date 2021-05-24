@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.0.0.js"></script>
+    <script src="../../Scripts/umd/popper.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+    
+    <link href="../../Content/Forms.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--header
+        1st row-->
+        <header class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a class="navbar-brand" href="../../index.html">Home</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Courses/Courses.html">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Trainers/Trainers.html">Trainers</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link text-warning" href="Students.html">Students</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Assignments/Assignments.html">Assignments</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!--Student list-->
+        <main class="row">
+            <div class="col">
+                <div class="container">
+
+
+                    <h1 class="mt-4">Add new student</h1>
+
+
+                    <form>
+                        <div class="form-group">
+                            <label for="firstN">First Name *</label>
+                            <input id="firstN" class="form-control" type="text" name="firstname" value="" placeholder="Letters and spaces only. Maximum length 20 characters" autocomplete="off" minlength="2" maxlength="20" pattern="[A-Za-zα-ωΑ-Ω]{2,20}" title="Only letters, 2 to 20 characters" />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastN">Last Name *</label>
+                            <input id="lastN" class="form-control" type="text" name="lastname" value="" placeholder="Letters and spaces only. Maximum length 20 characters" autocomplete="off" minlength="2" maxlength="20" pattern="[A-Za-zα-ωΑ-Ω]{2,20}" title="Only letters, 2 to 20 characters" />
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Birth Date (from 1/1/1960 to 1/1/2003) * </label>
+                            <input id="date" class="form-control" type="date" name="birthdate" value="" autocomplete="off" required min="1960-01-01" max="2003-12-31" />
+                        </div>
+                        <div class="form-group">
+                            <label for="fees">Tuition fees * </label>
+                            <input id="fees" class="form-control" type="number" name="tuitionfees" value="" placeholder="Minimum amount 2500, maximum 5000, 2 decimals." autocomplete="off" min="2500" max="5000" required />
+                        </div>
+
+                        <div>
+                            <label for="courses">Courses</label>
+                            <select multiple class="form-control" id="courses" name="student-list" size="2" required>
+                                <option>Drums</option>
+                                <option>Theory</option>
+                                <option>Guitar</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="assignments">Assignments</label>
+                            <select multiple class="form-control" id="assignments" name="student-list" size="3" required>
+                                <option>Drums - Mid Term</option>
+                                <option>Drums - Final</option>
+                                <option>Theory - Mid Term</option>
+                                <option>Theory - Final</option>
+                                <option>Guitar - Mid Term</option>
+                                <option>Guitar - Final</option>
+                            </select>
+                        </div>
+
+
+                        <button class="btn btn-primary form-control">Submit</button>
+
+
+                    </form>
+
+                    <div class="mt-4 mb-0">
+                        <a class="btn btn-success" href="Students.html">Return to Students</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+
+
+</body>
+</html>

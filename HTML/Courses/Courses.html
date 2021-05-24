@@ -1,0 +1,734 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.0.0.js"></script>
+    <script src="../../Scripts/umd/popper.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+    
+    <link href="../../Content/dropdown-menu.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--header
+    1st row-->
+    <header class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a class="navbar-brand" href="../../index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+
+                        <!--Courses-->
+                        <li class="nav-item active">
+                            <a class="nav-link text-warning" href="Courses.html">Courses</a>
+                        </li>
+
+                        <!--Trainers-->
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../../HTML/Trainers/Trainers.html">Trainers</a>
+                        </li>
+
+                        <!--Students-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../HTML/Students/Students.html">Students</a>
+                        </li>
+
+                        <!--Assignments-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../HTML/Assignments/Assignments.html">Assignments</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="row">
+        <div class="col">
+            <div class="container-fluid">
+
+
+                <h3 class="mt-4">Courses</h3>
+
+
+                <div class="mt-4 mb-0">
+                    <a class="btn btn-success" href="Courses_Add.html">Add Course</a>
+                </div>
+
+                <div class="mt-4 mb-0">
+                    <table class="table table-bordered table-striped table-light text-center">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Stream</th>
+                                <th>Type</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Trainers</th>
+                                <th>Students</th>
+                                <th>Assignments</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            <tr>
+                                <td>Drums</td>
+                                <td>Instruments</td>
+                                <td>Full Time</td>
+                                <td>15/9/2020</td>
+                                <td>15/6/2021</td>
+                                <!--View Trainers-->
+                                <td>
+
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#trainers-drums">
+                                        View
+                                    </button>
+
+                                    <div class="modal" id="trainers-drums">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Trainers per Course</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <table class="table table-light text-center">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Obi-Wan</td>
+                                                                <td>Kenobi</td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mace</td>
+                                                                <td>Windu</td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+
+
+                                                <div class="modal-footer">
+                                                    <div class="btn-group"></div>
+                                                    <a href="Courses_Edit.html#trainers" class="btn btn-warning">Edit</a>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <!--View Students-->
+                                <td>
+
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#students-drums">
+                                        View
+                                    </button>
+
+
+                                    <div class="modal" id="students-drums">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Students per Course</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered table-light table-striped">
+                                                        <tr>
+                                                            <td>Logen</td>
+                                                            <td>Ninefingers</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Saruman</td>
+                                                            <td>the White</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elrond</td>
+                                                            <td>Halfelven</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Logen</td>
+                                                            <td>Ninefingers</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Saruman</td>
+                                                            <td>the White</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elrond</td>
+                                                            <td>Halfelven</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Logen</td>
+                                                            <td>Ninefingers</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Saruman</td>
+                                                            <td>the White</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elrond</td>
+                                                            <td>Halfelven</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <div class="btn-group"></div>
+                                                    <a href="Courses_Edit.html#students" class="btn btn-warning">Edit</a>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <!--View Assignments-->
+                                <td>
+
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#assignments-drums">
+                                        View
+                                    </button>
+
+
+                                    <div class="modal" id="assignments-drums">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Assignments per Course</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+
+                                                <div class="modal-body">
+                                                    <table class="table table-borderless text-center">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Title</th>
+                                                            <th>Due Date</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>Final</td>
+                                                            <td>10-6-2021</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mid Term</td>
+                                                            <td>10-6-2021</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <div class="btn-group"></div>
+                                                    <a href="Courses_Edit.html#assignments" class="btn btn-warning">Edit</a>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    <div class="btn-group">
+                                        <a class="btn btn-warning" href="Courses_Edit.html">Edit</a>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Popular Music Theory</td>
+                                <td>Theory</td>
+                                <td>Part Time</td>
+                                <td>15/1/2021</td>
+                                <td>15/6/2021</td>
+                                <!--View Trainers-->
+                                <td>
+
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#trainers-theory">
+                                        View
+                                    </button>
+
+                                    <div class="modal" id="trainers-theory">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Trainers per Course</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <table class="table table-light text-center">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Obi-Wan</td>
+                                                                <td>Kenobi</td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mace</td>
+                                                                <td>Windu</td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+
+
+                                                <div class="modal-footer">
+                                                    <div class="btn-group"></div>
+                                                    <a href="Courses_Edit.html#trainers" class="btn btn-warning">Edit</a>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <!--View Students-->
+                                <td>
+
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#students-theory">
+                                        View
+                                    </button>
+
+
+                                    <div class="modal" id="students-theory">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Students per Course</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered table-light table-striped">
+                                                        <tr>
+                                                            <td>Logen</td>
+                                                            <td>Ninefingers</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Saruman</td>
+                                                            <td>the White</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elrond</td>
+                                                            <td>Halfelven</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Logen</td>
+                                                            <td>Ninefingers</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Saruman</td>
+                                                            <td>the White</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elrond</td>
+                                                            <td>Halfelven</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Logen</td>
+                                                            <td>Ninefingers</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Saruman</td>
+                                                            <td>the White</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elrond</td>
+                                                            <td>Halfelven</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <div class="btn-group"></div>
+                                                    <a href="Courses_Edit.html#students" class="btn btn-warning">Edit</a>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <!--View Assignments-->
+                                <td>
+
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#assignments-theory">
+                                        View
+                                    </button>
+
+
+                                    <div class="modal" id="assignments-theory">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Assignments per Course</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+
+                                                <div class="modal-body">
+                                                    <table class="table table-borderless text-center">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Title</th>
+                                                                <th>Due Date</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Final</td>
+                                                                <td>10-6-2021</td>
+                                                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mid Term</td>
+                                                                <td>10-6-2021</td>
+                                                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <div class="btn-group"></div>
+                                                    <a href="Courses_Edit.html#assignments" class="btn btn-warning">Edit</a>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a class="btn btn-warning" href="Courses_Edit.html">Edit</a>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Electric Guitar</td>
+                                <td>Instrument</td>
+                                <td>Full Time</td>
+                                <td>15/9/2020</td>
+                                <td>15/6/2021</td>
+                                <!--View Trainers-->
+                                <td>
+
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#trainers-guitar">
+                                        View
+                                    </button>
+
+                                    <div class="modal" id="trainers-guitar">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Trainers per Course</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <table class="table table-light text-center">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Obi-Wan</td>
+                                                                <td>Kenobi</td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mace</td>
+                                                                <td>Windu</td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                </div>
+
+
+                                                <div class="modal-footer">
+                                                    <div class="btn-group"></div>
+                                                    <a href="Courses_Edit.html#trainers" class="btn btn-warning">Edit</a>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <!--View Students-->
+                                <td>
+
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#students-guitar">
+                                        View
+                                    </button>
+
+
+                                    <div class="modal" id="students-guitar">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Students per Course</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered table-light table-striped">
+                                                        <tr>
+                                                            <td>Logen</td>
+                                                            <td>Ninefingers</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Saruman</td>
+                                                            <td>the White</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elrond</td>
+                                                            <td>Halfelven</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Logen</td>
+                                                            <td>Ninefingers</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Saruman</td>
+                                                            <td>the White</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elrond</td>
+                                                            <td>Halfelven</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Logen</td>
+                                                            <td>Ninefingers</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Saruman</td>
+                                                            <td>the White</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elrond</td>
+                                                            <td>Halfelven</td>
+                                                            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <div class="btn-group"></div>
+                                                    <a href="Courses_Edit.html#students" class="btn btn-warning">Edit</a>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <!--View Assignments-->
+                                <td>
+
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#assignments-guitar">
+                                        View
+                                    </button>
+
+
+                                    <div class="modal" id="assignments-guitar">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Assignments per Course</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+
+                                                <div class="modal-body">
+                                                    <table class="table table-borderless text-center">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Title</th>
+                                                                <th>Due Date</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Final</td>
+                                                                <td>10-6-2021</td>
+                                                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mid Term</td>
+                                                                <td>10-6-2021</td>
+                                                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <div class="btn-group"></div>
+                                                    <a href="Courses_Edit.html#assignments" class="btn btn-warning">Edit</a>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a class="btn btn-warning" href="Courses_Edit.html">Edit</a>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal" id="delete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Are you sure you want to delete?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+</main>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

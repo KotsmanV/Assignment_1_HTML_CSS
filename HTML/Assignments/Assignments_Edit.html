@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.0.0.js"></script>
+    <script src="../../Scripts/umd/popper.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+
+    <link href="../../Content/dropdown-menu.css" rel="stylesheet" />
+    <link href="../../Content/Forms.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--header
+        1st row-->
+        <header class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a class="navbar-brand" href="../../index.html">Home</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+
+                            <!--Courses-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../HTML/Courses/Courses.html">Courses</a>
+                            </li>
+
+                            <!--Trainers-->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../../HTML/Trainers/Trainers.html">Trainers</a>
+                            </li>
+
+                            <!--Students-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../HTML/Students/Students.html">Students</a>
+                            </li>
+
+                            <!--Assignments-->
+                            <li class="nav-item active">
+                                <a class="nav-link text-warning" href="Assignments.html">Assignments</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="row">
+            <div class="col">
+                <div class="container-fluid">
+                    <main class="row">
+                        <div class="col">
+                            <div class="container">
+
+                                <h1 class="mt-4">Edit Course</h1>
+
+                                <form>
+                                    <div class="form-group">
+                                        <label for="title">Title * </label>
+                                        <input id="title" class="form-control" type="text" name="title" value="Final" placeholder="Letters and spaces only. Maximum length 20 characters" autocomplete="off" minlength="2" maxlength="20" pattern="[A-Za-zα-ωΑ-Ω]{2,20}" title="Only letters, 2 to 20 characters" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="type">Type *</label>
+                                        <select id="type" class="form-control" required>
+                                            <option></option>
+                                            <option value="Entry">Entry</option>
+                                            <option value="Midtern">Mid Term</option>
+                                            <option value="Final">Final</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <input id="description" class="form-control" value="This is presented at the end of the course's duration." type="text" name="description" placeholder="Maximum length 100 characters" autocomplete="off" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="subdate">Submission Date * (Entry: one month, Mid Term: Half of the duration, Final: 5 to 10 days from end) </label>
+                                        <input id="subdate" value="2021-06-05" class="form-control" type="date" name="subdate" value="" autocomplete="off" required />
+                                    </div>
+                                    <div>
+                                        <label for="courses">Courses * </label>
+                                        <select multiple class="form-control" id="courses" name="trainer-list" size="2" required>
+                                            <option>Drums</option>
+                                            <option>Popular Music Theory</option>
+                                            <option>Guitar</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <button class="btn btn-primary form-control">Submit</button>
+                                    </div>
+
+
+
+                                </form>
+
+                                <div class="mt-4 mb-0">
+                                    <a class="btn btn-success" href="Assignments.html">Return to Assignments</a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </main>
+
+                </div>
+            </div>
+        </main>
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>
